@@ -1,0 +1,116 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Updated font */
+    background-color: #2d2d2d; /* Dark background */
+    color: #eaeaea; /* Light text color */
+    padding: 40px 20px; /* Increased padding for better spacing */
+    margin: 0; /* Reset margin */
+}
+
+.container {
+    max-width: 400px; /* Adjusted for a more focused layout */
+    margin: 0 auto;
+    background-color: #18181b; /* Darker container */
+    padding: 40px; /* Increased padding for a more spacious feel */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* More pronounced shadow */
+    position: relative; /* For animations */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #9146ff; /* Twitch purple for headings */
+    margin-bottom: 20px; /* Spacing below headers */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%; /* Full width */
+    background-color: #333; /* Dark input background */
+    color: #eaeaea; /* Light text color */
+    border: 1px solid #444; /* Dark border */
+    padding: 12px; /* Padding */
+    border-radius: 5px; /* Rounded edges */
+    margin-bottom: 20px; /* Space between inputs */
+    transition: border-color 0.3s; /* Animation on focus */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #9146ff; /* Highlight border color on focus */
+    outline: none; /* Remove outline */
+}
+
+input[type="submit"] {
+    background-color: #9146ff; /* Bright Twitch purple submit button */
+    color: white; /* Text color for submit */
+    border: none; /* No border */
+    padding: 12px; /* Padding */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Animation on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #7324d4; /* Darker purple on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+ul {
+    list-style: none; /* No bullets */
+    padding: 0;
+}
+
+a {
+    color: #9146ff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s; /* Animation on hover */
+}
+
+a:hover {
+    color: #7324d4; /* Darker purple on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.flashes {
+    list-style: none; /* No bullets */
+    padding: 0;
+    text-align: center; /* Center aligned */
+}
+
+.flashes li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px; /* Rounded edges for messages */
+}
+
+.success {
+    background-color: #28a745; /* Green for success messages */
+}
+
+.error {
+    background-color: #dc3545; /* Red for error messages */
+}
+
+/* Login Page Animation */
+.login-animation {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floating 4s ease-in-out infinite; /* Floating animation */
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateX(-50%) translateY(-10px); /* Float up */
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px); /* Float down */
+    }
+}
